@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: kdziemidowicz/kdziemidowicz.github.io   # <-- REPLACE with your-username/your-repo-name
+  branch: main
+  base_url: https://api.netlify.com             # routes login through Netlify's free OAuth proxy
+  auth_endpoint: auth
+
+# Where uploaded images go, and how they're referenced in posts
+media_folder: "uploads"
+public_folder: "/uploads"
+
+# Shown at the top of the CMS so you know which site you're editing
+site_url: https://kdziemidowicz.github.io
+display_url: https://kdziemidowicz.github.io
+logo_url: https://kdziemidowicz.github.io/karolina.jpg
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Short summary (shown on the News list)", name: "summary", widget: "text" }
+      - { label: "Cover image (optional)", name: "image", widget: "image", required: false }
+      - { label: "Full article", name: "body", widget: "markdown" }

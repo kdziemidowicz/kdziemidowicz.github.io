@@ -1,0 +1,13 @@
+title: Dziemidowicz Lab
+description: UCL School of Pharmacy
+markdown: kramdown
+permalink: /news/:year-:month-:day-:title/
+
+# Tell Jekyll to leave the hand-built pages alone -
+# it only needs to process the _posts collection
+include:
+  - _posts
+
+exclude:
+  - admin
+  - README.md
