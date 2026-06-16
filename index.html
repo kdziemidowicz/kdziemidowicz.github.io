@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dziemidowicz Lab · UCL School of Pharmacy</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Nunito+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--surface:#F5F5F5;--ink:#1A1A1A;--muted:#8A8A8A;--accent:#B85FAE;--violet:#6F50FF;--yellow:#F3FF87;--grey:#C5C5C5;--rule:#E2E2E2;--sans:'Nunito Sans',system-ui,sans-serif;--head:'Outfit',sans-serif;--max-w:1000px;--pad:max(2rem,5vw)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.65}
+h1,h2,h3{font-family:var(--head);font-weight:500;color:var(--ink)}
+nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--rule);padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-left{display:flex;align-items:center;gap:1rem}
+.ucl-logo{height:28px;width:auto}
+.nav-divider{width:1px;height:22px;background:var(--rule)}
+.nav-brand{font-family:var(--head);font-size:0.95rem;color:var(--ink);font-weight:600;text-decoration:none}
+.nav-links{display:flex;list-style:none}
+.nav-links a{display:block;padding:0 1rem;font-size:0.85rem;color:var(--muted);text-decoration:none;font-weight:400;line-height:58px;transition:color 0.2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.active{color:var(--ink);border-bottom:1.5px solid var(--accent)}
+
+.hero{position:relative;height:60vh;min-height:420px;max-height:560px;overflow:hidden;background:#111}
+.hero img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);opacity:0.55}
+.hero-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 1.5rem}
+.hero-overlay h1{font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;font-weight:500;line-height:1.3;margin-bottom:1.25rem;max-width:24ch}
+.hero-overlay p{font-family:var(--sans);font-size:1.05rem;color:rgba(255,255,255,0.88);font-weight:300;line-height:1.7;max-width:46ch}
+
+section{padding:4rem var(--pad);max-width:var(--max-w);margin:0 auto}
+.section-title-center{font-size:2.2rem;text-align:center;margin-bottom:2.5rem;font-weight:400}
+
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2.5rem}
+.res-card{background:var(--surface);border-radius:6px;padding:1.5rem;display:grid;grid-template-columns:140px 1fr;gap:1.25rem;align-items:start}
+.res-img{width:140px;height:140px;border-radius:5px;overflow:hidden;background:#ccc;flex-shrink:0}
+.res-img img{width:100%;height:100%;object-fit:cover}
+.res-card h3{font-size:1.1rem;margin-bottom:0.6rem;line-height:1.3}
+.res-card p{font-family:var(--sans);font-size:0.92rem;color:#5a5a5a;line-height:1.65;font-weight:300}
+
+.ucl-ban{background:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.ucl-ban-left,.ucl-ban-right{padding:3.5rem 2.5rem}
+.ucl-ban h2{color:#fff;font-size:1.9rem;font-weight:500;line-height:1.35;margin-bottom:1rem}
+.ucl-rule{width:36px;height:2px;background:var(--accent)}
+.ucl-ban-right{background:rgba(255,255,255,0.04)}
+.ucl-ban-right p{font-family:var(--sans);font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:0.85rem;font-weight:300}
+.ucl-email{font-family:var(--sans);font-size:0.92rem;color:var(--yellow);font-weight:500;text-decoration:none}
+
+footer{border-top:1px solid var(--rule);padding:2rem var(--pad);max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-size:0.8rem;color:var(--muted)}
+
+@media(max-width:768px){.res-grid,.ucl-ban{grid-template-columns:1fr}.res-card{grid-template-columns:1fr}.res-img{width:100%;height:160px}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;transition-duration:0.01ms !important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <img class="ucl-logo" src="https://cdn.ucl.ac.uk/logos/ucl/ucl-logo--primary.svg" alt="UCL University College London">
+    <div class="nav-divider"></div>
+    <a class="nav-brand" href="index.html">Dziemidowicz Lab</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="about-karolina.html">About Karolina</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <img src="fibre.jpg" alt="Scanning electron micrograph of electrospun PVA nanofibres">
+  <div class="hero-overlay">
+    <h1>Welcome to Dziemidowicz Lab at UCL School of Pharmacy</h1>
+    <p>We are a multidisciplinary team developing novel biomaterials and drug delivery platforms</p>
+  </div>
+</div>
+
+<section>
+  <h2 class="section-title-center">Research interests</h2>
+  <div class="res-grid">
+    <div class="res-card">
+      <div class="res-img"><img src="fibre.jpg" alt="Electrospun nanofibres"></div>
+      <div><h3>Immunostimulatory biomaterials</h3><p>Safely delivering fragile biomolecules such as antibodies, peptides or cytokines to enhance immune responses in cancer immunotherapy.</p></div>
+    </div>
+    <div class="res-card">
+      <div class="res-img" style="background:linear-gradient(135deg,#2a2a3a,#1a1a24)"></div>
+      <div><h3>Electrohydrodynamic processes</h3><p>Efficiently encapsulating small molecules and biomolecules using electrospraying and electrospinning to improve therapeutic efficacy and patient acceptability.</p></div>
+    </div>
+    <div class="res-card">
+      <div class="res-img" style="background:linear-gradient(135deg,#3a3a3a,#252525)"></div>
+      <div><h3>Localised drug delivery</h3><p>Exploring innovative methods to deliver therapeutics directly to the site of action, including convection-enhanced delivery into the brain and drug-eluting implantable materials.</p></div>
+    </div>
+    <div class="res-card">
+      <div class="res-img" style="background:linear-gradient(135deg,#4a4a4a,#303030)"></div>
+      <div><h3>Protein, peptide and polymer delivery</h3><p>Looking for innovative methods of delivering biomolecules using advanced drug delivery methods and formulation strategies.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="ucl-ban">
+  <div class="ucl-ban-left">
+    <h2>Interested in<br>working with us?</h2>
+    <div class="ucl-rule"></div>
+  </div>
+  <div class="ucl-ban-right">
+    <p>Our research interests are diverse. We want our research to have real impact on patients' lives.</p>
+    <p>Have an idea for a drug delivery project? Reach out! There is a high chance we can help.</p>
+    <a class="ucl-email" href="mailto:k.dziemidowicz@ucl.ac.uk">k.dziemidowicz@ucl.ac.uk</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Dziemidowicz Lab · UCL School of Pharmacy · London WC1N 1AX</p>
+  <p style="font-family:monospace;font-size:0.72rem">k.dziemidowicz@ucl.ac.uk</p>
+</footer>
+
+</body>
+</html>
