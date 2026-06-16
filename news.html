@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>News · Dziemidowicz Lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Nunito+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--surface:#F5F5F5;--ink:#1A1A1A;--muted:#8A8A8A;--accent:#B85FAE;--violet:#6F50FF;--yellow:#F3FF87;--grey:#C5C5C5;--rule:#E2E2E2;--sans:'Nunito Sans',system-ui,sans-serif;--head:'Outfit',sans-serif;--max-w:900px;--pad:max(2rem,5vw)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.65}
+h1,h2,h3{font-family:var(--head);font-weight:500;color:var(--ink)}
+nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--rule);padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-left{display:flex;align-items:center;gap:1rem}
+.ucl-logo{height:28px;width:auto}
+.nav-divider{width:1px;height:22px;background:var(--rule)}
+.nav-brand{font-family:var(--head);font-size:0.95rem;color:var(--ink);font-weight:600;text-decoration:none}
+.nav-links{display:flex;list-style:none}
+.nav-links a{display:block;padding:0 1rem;font-size:0.85rem;color:var(--muted);text-decoration:none;font-weight:400;line-height:58px}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.active{color:var(--ink);border-bottom:1.5px solid var(--accent)}
+
+.page-hero{padding:3.5rem var(--pad) 1.5rem;max-width:var(--max-w);margin:0 auto}
+.page-hero h1{font-size:2.4rem;margin-bottom:0.75rem}
+.page-hero p{color:var(--muted);font-size:1.02rem;max-width:54ch;font-family:var(--sans);font-weight:300;line-height:1.7}
+
+section{padding:1rem var(--pad) 4rem;max-width:var(--max-w);margin:0 auto}
+.post-list{display:flex;flex-direction:column}
+.post-item{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;padding:1.75rem 0;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit}
+.post-item:first-child{padding-top:0}
+.post-date{font-family:var(--sans);font-size:0.78rem;color:var(--accent);font-weight:500;padding-top:0.2rem}
+.post-title{font-family:var(--head);font-size:1.2rem;color:var(--ink);margin-bottom:0.4rem}
+.post-summary{font-family:var(--sans);font-size:0.9rem;color:var(--muted);line-height:1.65}
+
+.empty-note{font-family:var(--sans);font-size:0.85rem;color:var(--muted);text-align:center;padding:2.5rem 0;border-top:1px dashed var(--rule);margin-top:0.5rem}
+
+footer{border-top:1px solid var(--rule);padding:2rem var(--pad);max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-size:0.8rem;color:var(--muted)}
+
+@media(max-width:600px){.post-item{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;transition-duration:0.01ms !important}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left">
+    <img class="ucl-logo" src="https://cdn.ucl.ac.uk/logos/ucl/ucl-logo--primary.svg" alt="UCL University College London">
+    <div class="nav-divider"></div>
+    <a class="nav-brand" href="index.html">Dziemidowicz Lab</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="about-karolina.html">About Karolina</a></li>
+    <li><a href="news.html" class="active">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>News</h1>
+  <p>Updates from the lab — new publications, grants, conference talks, and team milestones.</p>
+</div>
+
+<section>
+  <div class="post-list">
+
+    <!-- ── Each news item is one block below. Copy this block to add a new post. ── -->
+    <a class="post-item" href="#">
+      <div class="post-date">16 Jun 2026</div>
+      <div>
+        <div class="post-title">Welcome to our News page</div>
+        <div class="post-summary">This is a sample post. To add a real one, copy this block and edit the date, title, and summary text directly in news.html.</div>
+      </div>
+    </a>
+    <!-- ── End sample block ── -->
+
+  </div>
+
+  <p class="empty-note">More news will appear here as the lab publishes updates.</p>
+</section>
+
+<footer>
+  <p>© 2026 Dziemidowicz Lab · UCL School of Pharmacy · London WC1N 1AX</p>
+  <p style="font-family:monospace;font-size:0.72rem">k.dziemidowicz@ucl.ac.uk</p>
+</footer>
+</body>
+</html>
