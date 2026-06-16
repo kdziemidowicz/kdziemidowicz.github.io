@@ -1,0 +1,11 @@
+title: Dziemidowicz Lab
+description: UCL School of Pharmacy
+
+# Jekyll only needs to process markdown files in _posts into pages.
+# Everything else (index.html, research.html, etc.) is plain HTML
+# and Jekyll passes those through untouched automatically.
+markdown: kramdown
+permalink: /news-archive/:year-:month-:day-:title/
+
+exclude:
+  - README.md
