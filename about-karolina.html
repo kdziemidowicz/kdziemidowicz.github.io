@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Karolina · Dziemidowicz Lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Nunito+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--surface:#F5F5F5;--ink:#1A1A1A;--muted:#8A8A8A;--accent:#B85FAE;--violet:#6F50FF;--yellow:#F3FF87;--grey:#C5C5C5;--rule:#E2E2E2;--sans:'Nunito Sans',system-ui,sans-serif;--head:'Outfit',sans-serif;--max-w:1000px;--pad:max(2rem,5vw)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.65}
+h1,h2,h3{font-family:var(--head);font-weight:500;color:var(--ink)}
+nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--rule);padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-left{display:flex;align-items:center;gap:1rem}
+.ucl-logo{height:28px;width:auto}
+.nav-divider{width:1px;height:22px;background:var(--rule)}
+.nav-brand{font-family:var(--head);font-size:0.95rem;color:var(--ink);font-weight:600;text-decoration:none}
+.nav-links{display:flex;list-style:none}
+.nav-links a{display:block;padding:0 1rem;font-size:0.85rem;color:var(--muted);text-decoration:none;font-weight:400;line-height:58px}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.active{color:var(--ink);border-bottom:1.5px solid var(--accent)}
+
+.profile-header{padding:3.5rem var(--pad) 2.5rem;max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:200px 1fr;gap:2.5rem;align-items:start}
+.profile-photo{width:200px;height:200px;border-radius:50%;overflow:hidden;border:2px solid var(--rule);flex-shrink:0}
+.profile-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.profile-role{font-family:var(--sans);font-size:0.78rem;color:var(--accent);letter-spacing:0.03em;font-weight:600;margin-bottom:0.5rem}
+.profile-name{font-size:2.2rem;margin-bottom:0.85rem}
+.profile-tagline{font-family:var(--sans);font-size:1rem;color:var(--muted);max-width:50ch;line-height:1.7;margin-bottom:1.25rem;font-weight:300}
+.profile-external{display:flex;flex-wrap:wrap;gap:0.5rem}
+.ext-link{font-family:var(--sans);font-size:0.78rem;padding:0.4rem 0.9rem;border-radius:20px;background:#fff;border:1px solid var(--rule);color:var(--muted);text-decoration:none}
+.ext-link:hover{border-color:var(--ink);color:var(--ink)}
+
+section{padding:2.5rem var(--pad);max-width:var(--max-w);margin:0 auto}
+.sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.75rem;border-bottom:1px solid var(--rule);padding-bottom:1rem}
+.sec-tag{font-family:var(--sans);font-size:0.72rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;font-weight:600}
+.sec-head h2{font-size:1.5rem}
+
+.bio-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start}
+.bio p{font-family:var(--sans);font-size:0.96rem;color:#5a5a5a;line-height:1.85;margin-bottom:1rem;font-weight:300}
+.theme-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.25rem}
+.theme-tag{font-family:var(--sans);font-size:0.78rem;padding:0.35rem 0.85rem;border-radius:20px;background:var(--surface);color:#5a5a5a;font-weight:500}
+.theme-tag.hot{background:#FAFCE0;color:#6A6A00;border:1px solid #E0E860}
+
+.facts{display:flex;flex-direction:column;gap:0.85rem}
+.fact{background:var(--surface);border-radius:6px;padding:0.85rem 1.1rem}
+.fact-label{font-family:var(--sans);font-size:0.68rem;color:var(--muted);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.25rem}
+.fact-value{font-family:var(--sans);font-size:0.9rem;font-weight:600;color:var(--ink)}
+
+.timeline{display:flex;flex-direction:column}
+.tl-item{display:grid;grid-template-columns:130px 1fr;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid var(--rule)}
+.tl-item:last-child{border-bottom:none}
+.tl-year{font-family:monospace;font-size:0.78rem;color:var(--accent);padding-top:2px}
+.tl-content h3{font-size:1rem;margin-bottom:0.2rem}
+.tl-content p{font-family:var(--sans);font-size:0.85rem;color:var(--muted);line-height:1.6}
+
+.pub-list{display:flex;flex-direction:column;gap:0.85rem}
+.pub-item{background:var(--surface);border-radius:6px;padding:1.1rem 1.4rem;display:grid;grid-template-columns:70px 1fr;gap:1rem}
+.pub-year{font-family:monospace;font-size:0.75rem;color:var(--accent)}
+.pub-title{font-size:0.94rem;font-weight:600;margin-bottom:0.3rem}
+.pub-meta{font-family:var(--sans);font-size:0.82rem;color:var(--muted)}
+.btn-outline{display:inline-flex;padding:0.6rem 1.2rem;border-radius:4px;font-size:0.83rem;font-weight:500;text-decoration:none;color:var(--ink);border:1.5px solid var(--rule);font-family:var(--head)}
+.btn-outline:hover{border-color:var(--ink)}
+
+footer{border-top:1px solid var(--rule);padding:2rem var(--pad);max-width:var(--max-w);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-size:0.8rem;color:var(--muted)}
+
+@media(max-width:768px){.profile-header{grid-template-columns:1fr}.profile-photo{width:150px;height:150px}.bio-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none !important;transition-duration:0.01ms !important}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left">
+    <img class="ucl-logo" src="https://cdn.ucl.ac.uk/logos/ucl/ucl-logo--primary.svg" alt="UCL University College London">
+    <div class="nav-divider"></div>
+    <a class="nav-brand" href="index.html">Dziemidowicz Lab</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="about-karolina.html" class="active">About Karolina</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="profile-header">
+  <div class="profile-photo"><img src="karolina.jpg" alt="Dr Karolina Dziemidowicz"></div>
+  <div>
+    <div class="profile-role">Principal Investigator · Lecturer in Pharmaceutics</div>
+    <h1 class="profile-name">Dr Karolina Dziemidowicz</h1>
+    <p class="profile-tagline">Developing drug delivery systems and biomaterials for conditions where precision matters most — spinal cord injury, brain tumours, and cancer immunotherapy.</p>
+    <div class="profile-external">
+      <a class="ext-link" href="https://profiles.ucl.ac.uk/58083-karolina-dziemidowicz" target="_blank">UCL Profile</a>
+      <a class="ext-link" href="https://scholar.google.com/citations?user=eXg_ahoAAAAJ" target="_blank">Google Scholar</a>
+      <a class="ext-link" href="https://www.researchgate.net/profile/Karolina-Dziemidowicz" target="_blank">ResearchGate</a>
+      <a class="ext-link" href="https://uk.linkedin.com/in/kdziemidowicz" target="_blank">LinkedIn</a>
+      <a class="ext-link" href="mailto:k.dziemidowicz@ucl.ac.uk">Email</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="sec-head"><span class="sec-tag">Background</span><h2>Biography</h2></div>
+  <div class="bio-grid">
+    <div class="bio">
+      <p>Dr Karolina Dziemidowicz is a Lecturer in Pharmaceutics at UCL School of Pharmacy and head of the Dziemidowicz Lab. Her research sits at the intersection of materials science, pharmaceutical sciences, and biomedical engineering.</p>
+      <p>Karolina completed her PhD in the CDT in Advanced Therapeutics and Nanomedicines at UCL School of Pharmacy. Following her doctorate, she was awarded an EPSRC Doctoral Prize Fellowship, hosted by the UCL Centre for Nerve Engineering, to develop drug-releasing dural substitutes for decompression neurosurgery following spinal cord injury.</p>
+      <p>She joined the UCL academic faculty and established her independent research group, working on immunostimulatory biomaterials for cancer immunotherapy, localised drug delivery to the central nervous system, and electrohydrodynamic fabrication of precision drug delivery systems.</p>
+      <div class="theme-tags">
+        <span class="theme-tag">Nanotechnology</span>
+        <span class="theme-tag">Neuroscience</span>
+        <span class="theme-tag hot">New paper out now</span>
+        <span class="theme-tag">Drug Delivery</span>
+        <span class="theme-tag">Biomaterials</span>
+        <span class="theme-tag">Electrospinning</span>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="fact-label">Position</div><div class="fact-value">Lecturer in Pharmaceutics</div></div>
+      <div class="fact"><div class="fact-label">Institution</div><div class="fact-value">UCL School of Pharmacy</div></div>
+      <div class="fact"><div class="fact-label">Email</div><div class="fact-value">k.dziemidowicz@ucl.ac.uk</div></div>
+      <div class="fact"><div class="fact-label">Degree</div><div class="fact-value">PhD, UCL</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="sec-head"><span class="sec-tag">Career</span><h2>Academic History</h2></div>
+  <div class="timeline">
+    <div class="tl-item"><span class="tl-year">2022–present</span><div class="tl-content"><h3>Lecturer in Pharmaceutics</h3><p>UCL School of Pharmacy — established and leads the Dziemidowicz Lab.</p></div></div>
+    <div class="tl-item"><span class="tl-year">2021–2022</span><div class="tl-content"><h3>EPSRC Doctoral Prize Fellow</h3><p>UCL Centre for Nerve Engineering — drug-releasing dural substitutes for spinal cord injury.</p></div></div>
+    <div class="tl-item"><span class="tl-year">2016–2020</span><div class="tl-content"><h3>PhD Student</h3><p>UCL School of Pharmacy · CDT in Advanced Therapeutics and Nanomedicines.</p></div></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="sec-head"><span class="sec-tag">Publications</span><h2>Selected Publications</h2></div>
+  <div class="pub-list">
+    <div class="pub-item"><span class="pub-year">2025</span><div><div class="pub-title">Glucosamine and Galactosamine Functionalised Silica Nanoparticles for the Targeting of Glycoproteins</div><div class="pub-meta">Hardmeier M.S.E., Dziemidowicz K., Williams G.R., Davies G.L. · Journal of Cluster Science</div></div></div>
+    <div class="pub-item"><span class="pub-year">2024</span><div><div class="pub-title">A one-step method for generating antimicrobial nanofibre meshes via coaxial electrospinning</div><div class="pub-meta">Zhang F., Jacobs A.I., Woodall M.N.J., …, Williams G.R.</div></div></div>
+    <div class="pub-item"><span class="pub-year">2021</span><div><div class="pub-title">Encapsulation of Pharmaceutical and Nutraceutical Active Ingredients Using Electrospinning Processes</div><div class="pub-meta">Dziemidowicz K., Williams G.R., Ramakrishna S. · Nanomaterials 11(8), 1968</div></div></div>
+  </div>
+  <div style="margin-top:1.5rem"><a href="https://scholar.google.com/citations?user=eXg_ahoAAAAJ" target="_blank" class="btn-outline">Full publication list on Google Scholar →</a></div>
+</section>
+
+<footer>
+  <p>© 2026 Dziemidowicz Lab · UCL School of Pharmacy · London WC1N 1AX</p>
+  <p style="font-family:monospace;font-size:0.72rem">k.dziemidowicz@ucl.ac.uk</p>
+</footer>
+</body>
+</html>
